@@ -197,6 +197,10 @@ class BlobReader(io.BufferedIOBase):
 
         return self._pos
 
+    def tell(self):
+        """Return current position."""
+        return self._pos
+    
     def close(self):
         self._buffer.close()
 
